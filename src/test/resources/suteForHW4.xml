@@ -13,4 +13,9 @@
             <class name="hw4.ex2.Ex2"></class>
         </classes>
     </test>
+    <test name="tryFalse" parallel="none">
+        <classes>
+            <class name="hw4.ex2.FailedTest"></class>
+        </classes>
+    </test>
 </suite>
