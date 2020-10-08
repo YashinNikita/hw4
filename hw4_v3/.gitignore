@@ -1,9 +1,0 @@
-# Intellij
-.idea/
-*.iml
-*.iws
-*.allure
-
-# Maven
-log/
-target/
