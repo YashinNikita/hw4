@@ -1,6 +1,7 @@
 package hw4;
 
 import hw.base.DataHW;
+import hw.context.TestContext;
 import hw.pages.ex1.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,7 @@ public class BaseTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        TestContext.getInstance().setDriver(driver);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
         try {
