@@ -48,7 +48,6 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
-
     }
 
     public void compareStrings(String actual, String expected) {

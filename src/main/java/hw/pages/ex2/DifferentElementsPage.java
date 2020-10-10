@@ -149,6 +149,4 @@ public class DifferentElementsPage {
         return logWindow.getWaterLogAfterUnselection().isDisplayed()
                 && logWindow.getWindLogAfterUnselection().isDisplayed();
     }
-
-
 }
