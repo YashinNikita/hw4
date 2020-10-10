@@ -24,7 +24,7 @@ public class Ex2 extends BaseTest {
 
     @BeforeClass
     public void setEx2() {
-        differentElementsPage = new DifferentElementsPage(driver);
+        differentElementsPage = new DifferentElementsPage(getDriver());
     }
 
 
