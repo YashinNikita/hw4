@@ -1,4 +1,5 @@
 package hw4.ex1;
+
 import hw4.BaseTest;
 import hw4.TestListener;
 import io.qameta.allure.Feature;
@@ -6,7 +7,6 @@ import io.qameta.allure.Story;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
 import static org.testng.AssertJUnit.assertEquals;
 
 @Listeners(TestListener.class)

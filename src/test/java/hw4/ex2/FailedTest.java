@@ -21,4 +21,5 @@ public class FailedTest extends BaseTest {
         homePage.openHomePage();
         assertTrue(false);
     }
+
 }

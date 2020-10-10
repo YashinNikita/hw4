@@ -188,4 +188,5 @@ public class HomePage {
         difElemPage.click();
         return new DifferentElementsPage(driver);
     }
+
 }

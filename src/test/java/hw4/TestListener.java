@@ -28,5 +28,6 @@ public class TestListener implements ITestListener {
             saveScreenShotPNG(driver);
         }
     }
+
 }
 
