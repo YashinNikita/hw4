@@ -21,11 +21,10 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("I am in onTestFailure method " + getTestMethodName(result) + " failed");
-        Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
+        Object driver = result.getTestContext().getAttribute("driver");
         if (driver instanceof WebDriver) {
             System.out.println("Screenshot for test case:" + getTestMethodName(result));
-            saveScreenShotPNG(driver);
+            saveScreenShotPNG((WebDriver) driver);
         }
     }
 }

@@ -1,12 +1,12 @@
 package hw4;
 
 import hw.base.DataHW;
-import hw.context.TestContext;
 import hw.pages.ex1.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -26,10 +26,10 @@ public class BaseTest {
     private final String configDataPath = "src/test/resources/config/config.properties";
 
     @BeforeClass
-    public void setUp() {
+    public void setUp(ITestContext context) {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        TestContext.getInstance().setDriver(driver);
+        context.setAttribute("driver", this.driver);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
         try {

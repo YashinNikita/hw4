@@ -1,6 +1,5 @@
 package hw.pages.ex1;
 
-import hw.context.TestContext;
 import hw.pages.ex2.DifferentElementsPage;
 import hw.pages.ex2.component.Header;
 import io.qameta.allure.Step;
@@ -15,11 +14,12 @@ import java.util.List;
 public class HomePage {
 
     private final WebDriver driver;
-    private final Header header = new Header(TestContext.getInstance().getDriver());
+    private final Header header;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
+        header = new Header(driver);
     }
 
     @FindBy(className = "icons-benefit")

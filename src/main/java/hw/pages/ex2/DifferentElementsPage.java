@@ -1,6 +1,5 @@
 package hw.pages.ex2;
 
-import hw.context.TestContext;
 import hw.pages.ex2.component.LogWindow;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -41,12 +40,13 @@ public class DifferentElementsPage {
     @FindBy(css = "select.uui-form-element > option:nth-child(4)")
     private WebElement yellowDropdownOption;
 
-    private LogWindow logWindow = new LogWindow(TestContext.getInstance().getDriver());
+    private LogWindow logWindow;
     WebDriver driver;
 
     public DifferentElementsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
+        logWindow = new LogWindow(driver);
     }
 
     @Step("ex2.8.1 get checkboxes quantity on Different elements page")
